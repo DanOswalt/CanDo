@@ -1,0 +1,98 @@
+body {
+  text-align: center;
+  font-size: 16px;
+  font-family: courier;
+  color: #595241;
+}
+
+/* 
+Color Palette
+#595241 - muddy gray
+#376F6C - dark blue-green
+#E96E33 - orange
+#141414 - paint black
+*/
+
+h1 {
+	font-size: 6em;
+	color: #E96E33;
+	margin: 0;
+	padding-top: 8px;
+ 	font-family: 'Shadows Into Light';
+ 	text-decoration: underline;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-color: #595241;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 28px; 
+}
+
+table {
+	table-layout: fixed;
+  margin: 0 auto;
+}
+
+td a {
+	text-decoration: none;
+	color: black; /*#E96E33*/
+}
+
+td a:visited {
+	color: black; /*#E96E33*/
+}
+
+td {
+	box-sizing: border-box;
+	float: left;
+	display: inline-block;
+	width: 110px;
+	padding: 2px;
+	margin: 2px;
+  	border-radius: 5px;
+  	border: #E96E33 1px solid;
+  	color: white; /*#E96E33*/
+  	padding-top: 5px;
+  	height: 30px;
+  	font-size: 12px;
+  	background-color: #E96E33;
+}
+
+td:first-child:hover {
+	background: white;
+
+}
+
+td+td {
+  	color: white; /*#376F6C*/
+  	background-color: #444;
+}
+
+#showall {
+	margin: 10px auto;
+}
+
+#search {
+  	border: #E96E33 double 3px;
+  	color: #376F6C;
+  	font-family: courier;
+  	font-weight: bold;
+  	font-size: 2em;
+  	text-align: center;
+
+}
+
+::-webkit-input-placeholder {
+  color: #DDD;
+  font-size: 0.7em;
+  padding-top: 10px;
+}
+
+#candoers-table {
+    width:70%;
+    margin-top: 50px; 
+    margin-left:15%; 
+    margin-right:15%;
+}
