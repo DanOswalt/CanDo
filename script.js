@@ -25,6 +25,7 @@ $(function(){
     		$('#fetch-msg').remove();
 
     		var searchTerm = "",
+    			lastTerm = "",
     		    matchCount = 0,
     		    $allCells = $('td, th');
 
@@ -40,10 +41,12 @@ $(function(){
 
 			//jquery objects
 			var $searchBox = $('#search'),
+				$backBtn = $('#back-btn'),
 				$table = $('#candoers-table'),
 				$tableRows = $('tr').slice(1),
 				$tableRowHeaders = $('td:first-child'),
-				$tableDataCells = $('td');
+				$tableDataCells = $('td'),
+				$skillCells = $('td+td');	
 
 			//nice fade in when loaded
 			$table.fadeIn(600);
@@ -63,16 +66,47 @@ $(function(){
 				$(this).addClass('row-header');
 			});
 
-			//check for 3 chars
+			//bind click event to $skillCells to send the value to the input box
+			$skillCells.on('click', function() {
+				lastTerm = searchTerm;
+				searchTerm = $(this).text().trim().toUpperCase();
+				$searchBox.val(searchTerm);
+				toggleTableVisibility();
+				checkLastTerm();
+			});
+
+			$backBtn.on('click', function() {
+				backToLastTerm();
+				checkLastTerm();
+			});
+
+			//toggle visibility as keyword is entered
 			$searchBox.on('keyup', function() {
-
+				lastTerm = searchTerm;
 				searchTerm = this.value.trim().toUpperCase();
+				toggleTableVisibility();
+				checkLastTerm();
+			});
 
+			function checkLastTerm() {
+				if(lastTerm === $searchBox.val().trim().toUpperCase()) {
+					$backBtn.hide();
+				} else {
+					$backBtn.show();
+				}
+			}
+
+			function backToLastTerm() {
+				$searchBox.val(lastTerm).focus();
+				searchTerm = lastTerm;
+				toggleTableVisibility();
+			}
+
+			function toggleTableVisibility() {
 				toggleCellVisibilityForTextMatch(searchTerm);
 				//delay to wait for cell fade (200ms)
 				setTimeout(toggleRowVisibility, 250);
-
-			});
+			}
 
 			function toggleCellVisibilityForTextMatch() {
 

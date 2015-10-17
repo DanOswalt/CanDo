@@ -13,6 +13,17 @@ Color Palette
 #141414 - paint black
 */
 
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: white;
+}
+
+section {
+	margin-top: 100px;
+}
+
 h1 {
 	font-size: 6em;
 	color: #E96E33;
@@ -32,7 +43,7 @@ h3 {
 
 table {
 	table-layout: fixed;
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 td a {
@@ -58,16 +69,21 @@ td {
   	height: 30px;
   	font-size: 12px;
   	background-color: #E96E33;
+  	cursor: pointer;
 }
 
 td:first-child:hover {
-	background: white;
+	opacity: 0.5;
 
 }
 
 td+td {
   	color: white; /*#376F6C*/
   	background-color: #444;
+}
+
+td+td:hover {
+	opacity: 0.5;
 }
 
 #showall {

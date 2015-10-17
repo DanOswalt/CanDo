@@ -7,24 +7,27 @@
 </head>
 <body>
   <!--
-powered by sheetrock.js
+google sheet data loaded by sheetrock.js
 http://chriszarate.github.io/sheetrock
 -->
-	<h1>CAN DO</h1>
-  	<h3>Find coworkers who love to share what they can do</h3>
-	<input id='search' name='search' type='text' placeholder='type a skill'>
-	<h5 id='contact-msg' style='display: none'>Click name to get contact information</h5>
-	<table id="candoers-table" class="table table-condensed table-striped" style='display: none'></table>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<h3 id='fetch-msg'>fetching the table, gimme a sec...</h3>
-
-	<!-- Load jQuery and Sheetrock from CDNJS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.0.0/dist/sheetrock.min.js"></script>
-	<script src="script.js"></script>
+	<header>
+<!-- 		<h1>CAN DO</h1>
+	  	<h3>Find coworkers who love to share what they can do</h3> -->
+		<button id='back-btn'>back</button><input id='search' name='search' type='text' placeholder='type a skill'>
+		<h5 id='contact-msg' style='display: none'>Click name to get contact information</h5>
+	</header>
+	<section>
+		<table id="candoers-table" class="table table-condensed table-striped" style='display: none'></table>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3 id='fetch-msg'>fetching the table, gimme a sec...</h3>
+	</section>
+		<!-- Load jQuery and Sheetrock from CDNJS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.0.0/dist/sheetrock.min.js"></script>
+		<script src="script.js"></script>
   
 </body>
 </html>
