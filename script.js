@@ -66,6 +66,10 @@ $(function(){
 				$(this).addClass('row-header');
 			});
 
+			//////////
+			//events//
+			//////////
+
 			//bind click event to $skillCells to send the value to the input box
 			$skillCells.on('click', function() {
 				lastTerm = searchTerm;
@@ -85,7 +89,7 @@ $(function(){
 				lastTerm = searchTerm;
 				searchTerm = this.value.trim().toUpperCase();
 				toggleTableVisibility();
-				checkLastTerm();
+				// checkLastTerm();
 			});
 
 			function checkLastTerm() {

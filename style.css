@@ -21,24 +21,23 @@ header {
 }
 
 section {
-	margin-top: 100px;
+	margin-top: 200px;
 }
 
-h1 {
-	font-size: 6em;
+#logo {
+	font-size: 3em;
 	color: #E96E33;
 	margin: 0;
-	padding-top: 8px;
+	padding: 9px 0 0 0;
  	font-family: 'Shadows Into Light';
  	text-decoration: underline;
 }
 
-h3 {
-	font-size: 1.5em;
+#tagline {
+	font-size: 1.2em;
 	font-color: #595241;
 	margin: 0;
-	padding-top: 10px;
-	padding-bottom: 28px; 
+	padding: 5px;
 }
 
 table {
@@ -67,7 +66,7 @@ td {
   	color: white; /*#E96E33*/
   	padding-top: 5px;
   	height: 30px;
-  	font-size: 12px;
+  	font-size: 10px;
   	background-color: #E96E33;
   	cursor: pointer;
 }
@@ -90,14 +89,21 @@ td+td:hover {
 	margin: 10px auto;
 }
 
-#search {
-  	border: #E96E33 double 3px;
-  	color: #376F6C;
+.input-style {
+	border: #E96E33 double 3px;
   	font-family: courier;
   	font-weight: bold;
-  	font-size: 2em;
   	text-align: center;
+}
 
+#search {
+  	color: #376F6C;
+  	font-size: 1.8em;
+}
+
+#back-btn {
+	color: red;
+	cursor: pointer;
 }
 
 ::-webkit-input-placeholder {
